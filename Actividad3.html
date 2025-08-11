@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ONG Manos Solidarias</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Manos Solidarias</h1>
+        <p class="slogan">Trabajando juntos por un futuro mejor</p>
+      </div>
+      <button id="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h2>Nuestra misión</h2>
+        <p>Manos Solidarias trabaja para aportar soluciones locales en educación, alimento y apoyo comunitario. Nuestros voluntarios regresan esperanza a quienes más lo necesitan.</p>
+        <a href="#contacto" class="btn-primary">Únete como voluntario</a>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="https://picsum.photos/seed/onghero/900/600" alt="Voluntarios ayudando">
+      </div>
+    </section>
+    <section id="noticias" class="section">
+      <h2>Últimas noticias</h2>
+      <div id="news-container" class="news-grid"></div>
+    </section>
+    <section id="contacto" class="section">
+      <h2>Contáctanos</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+          <div class="error" id="error-name"></div>
+        </div>
+        <div class="form-row">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" required />
+          <div class="error" id="error-email"></div>
+        </div>
+        <div class="form-row">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+          <div class="error" id="error-message"></div>
+        </div>
+        <div class="form-actions">
+          <button id="submit-btn" type="submit" class="btn-primary">Enviar mensaje</button>
+          <span id="form-status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Manos Solidarias — contacto: info@manossolidarias.org</small>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
